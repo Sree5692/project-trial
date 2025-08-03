@@ -7,7 +7,7 @@ provider "aws" {
 resource "aws_instance" "ec2" {
   ami           = "ami-020cba7c55df1f615" # Ubuntu 24.04 LTS
   instance_type = "t2.large"
-  key_name      = "allkey.pem"
+  key_name      = "allkey"
 
   user_data = file("${path.module}/install.sh") # << Calling the external script
 
